@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import axios from '../axios/axios'
 
 const Sign = (props) => {
 	const [form, setForm] = useState({
@@ -7,6 +8,13 @@ const Sign = (props) => {
 
 	const changeHandler = e => {
 		setForm({...form}, [e.target.name] = e.target.value)
+	}
+
+	const registerHandler = (e) => {
+		e.preventDefault()
+		axios.post('/admin/register', {
+			form
+		})
 	}
 
   return(
@@ -37,6 +45,12 @@ const Sign = (props) => {
 					onClick={props.action} 
 				/>
       </form>
+
+			<form>
+				<input type='text' name='username' onChange={changeHandler} />
+				<input type='password' name='password' onChange={changeHandler} />
+				<input type='submit' value='sign up' onSubmit={registerHandler} />
+			</form>
 
     </div>
   )
