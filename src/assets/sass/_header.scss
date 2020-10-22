@@ -1,6 +1,6 @@
 .header{
   background-image: linear-gradient(to right, #095FA4, #08417F);
-  padding-top: 20px;
+  padding-top: 40px;
   color: white;
   .menu{
     display: flex;
@@ -17,6 +17,14 @@
       transition: 0.4s;
       &:hover{
         background-color: #365ee4;
+      }
+    }
+    .contact{
+      .link{
+        border: 1px solid #0DC5AB;
+        color: #0DC5AB;
+        background: transparent;
+        border-radius: 6px;
       }
     }
   }
@@ -39,6 +47,9 @@
           padding: 17px 40px;
           width: max-content;
           font-weight: bold;
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
       .gif-box{
@@ -47,6 +58,24 @@
           width: 100%;
         }
       }
+    }
+  }
+  .trusted-companies-box{
+    box-shadow: -10px 20px 60px rgba(110,133,168,.128141);
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    top: 50px;
+    border-radius: 20px;
+    color: black;
+    padding-bottom: 20px;
+    h4{
+      text-align: center;
+      padding-top: 16px;
+    }
+    .trusted-companies{
+      display: flex;
+      justify-content: space-around;
     }
   }
 }

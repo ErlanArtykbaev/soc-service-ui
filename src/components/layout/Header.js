@@ -8,17 +8,17 @@ const Header = () => {
 		<div className='header'>
 			<div className='menu'>
 				<div className='logo'>
-					<NavLink to='/' className='link'>home</NavLink>
+					<NavLink to='/' className='link'>Home</NavLink>
 				</div>
 				<div className='links-pages'>
-					<NavLink to='/team' className='link'>team and management</NavLink>
-					<NavLink to='/projects' className='link'>projects</NavLink>
-					<NavLink to='/blog' className='link'>news and blog</NavLink>
-					<NavLink to='/career' className='link'>career</NavLink>
-					<NavLink to='/about' className='link'>about</NavLink>
+					<NavLink to='/team' className='link'>Team </NavLink>
+					<NavLink to='/projects' className='link'>Projects</NavLink>
+					<NavLink to='/blog' className='link'>News And Blog</NavLink>
+					<NavLink to='/career' className='link'>Career</NavLink>
+					<NavLink to='/about' className='link'>About</NavLink>
 				</div>
 				<div className='contact'>
-					<NavLink to='/contactus' className='link'>contact us</NavLink>
+					<NavLink to='/contactus' className='link'>Contact Us</NavLink>
 				</div>
 			</div>
 			<div className='header-content'>
@@ -39,8 +39,22 @@ const Header = () => {
 						<img className='gif' src={bisness} alt='like' />
 					</div>
 				</div>
-				<div className='trusted-companies'>
-
+				<div className='trusted-companies-box'>
+					<h4>Trusted by more than 3,000 companies </h4>
+					<div className='trusted-companies'>
+						<div className='company'>
+							company
+						</div>
+						<div className='company'>
+							companies
+						</div>
+						<div className='company'>
+							company
+						</div>
+						<div className='company'>
+							company
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
