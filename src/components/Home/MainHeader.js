@@ -3,7 +3,7 @@ import bisness from "../../assets/img/bisness.svg";
 
 const MainHeader = () => {
     return (
-        <div className={'header'}>
+        <div className='MainHeader'>
             <div className='header-content'>
                 <div className='first-impression'>
                     <div className='texts'>

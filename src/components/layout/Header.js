@@ -3,9 +3,34 @@ import {NavLink} from 'react-router-dom'
 import MainHeader from "../Home/MainHeader";
 
 const Header = () => {
+
+    // document.scroll(() => {
+    //     if (document.scrollTop() > 50) {
+    //         console.log('qwe')
+    //         document.getElementsByClassName('MainHeader').classList.add("header-scrolled");
+    //     } else {
+    //         document.getElementsByClassName('MainHeader').classList.remove("header-scrolled");
+    //         console.log('qweqdwqwd')
+    //     }
+    // })
+
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+        const header = document.getElementById("header");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+
+            header.classList.add('headerScrolled');
+        } else {
+            console.log('qwe')
+            header.classList.remove('headerScrolled');
+        }
+    }
+
+
     return (
-        <>
-            <nav className="container navbar navbar-expand-lg navbar-light bg-light">
+        <div id={'header'} className={'header position-fixed w-100'}>
+            <nav className="container navbar navbar-expand-lg navbar-light bg-light bg-transparent">
                 <NavLink to='/' className='link'>Home</NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
@@ -48,7 +73,7 @@ const Header = () => {
                 </div>
             </nav>
 
-        </>
+        </div>
     )
 }
 

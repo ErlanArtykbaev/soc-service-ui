@@ -1,4 +1,4 @@
-.header{
+.MainHeader{
   background-image: linear-gradient(to right, #095FA4, #08417F);
   padding-top: 40px;
   color: white;
@@ -79,3 +79,9 @@
     }
   }
 }
+
+.headerScrolled{
+  background: #095FA4;
+  transition: background-color 0.5s ease-out;
+}
+
