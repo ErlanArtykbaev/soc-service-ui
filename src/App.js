@@ -1,5 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './assets/sass/style.scss'
 
 import Admin from './admin/Admin'
@@ -7,6 +9,7 @@ import Home from './pages/Home'
 import Header from './components/layout/Header'
 import About from './pages/About'
 import Projects from './pages/Projects'
+
 
 function App() {
     return (

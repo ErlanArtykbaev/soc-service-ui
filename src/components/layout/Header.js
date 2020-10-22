@@ -1,64 +1,55 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-
-import bisness from '../../assets/img/bisness.svg'
+import MainHeader from "../Home/MainHeader";
 
 const Header = () => {
-	return(
-		<div className='header'>
-			<div className='menu'>
-				<div className='logo'>
-					<NavLink to='/' className='link'>Home</NavLink>
-				</div>
-				<div className='links-pages'>
-					<NavLink to='/team' className='link'>Team </NavLink>
-					<NavLink to='/projects' className='link'>Projects</NavLink>
-					<NavLink to='/blog' className='link'>News And Blog</NavLink>
-					<NavLink to='/career' className='link'>Career</NavLink>
-					<NavLink to='/about' className='link'>About</NavLink>
-				</div>
-				<div className='contact'>
-					<NavLink to='/contactus' className='link'>Contact Us</NavLink>
-				</div>
-			</div>
-			<div className='header-content'>
-				<div className='first-impression'>
-					<div className='texts'>
-						<h1>
-							Join the New Era of Secure Digital Identities and Business Communications
-						</h1>
-						<p>
-							Our unique platform is developed to facilitate all your business processes 
-							with the highest security standards. 
-						</p>
-						<div className='btn-journey-start'>
-							journey starts here
-						</div>
-					</div>
-					<div className='gif-box'>
-						<img className='gif' src={bisness} alt='like' />
-					</div>
-				</div>
-				<div className='trusted-companies-box'>
-					<h4>Trusted by more than 3,000 companies </h4>
-					<div className='trusted-companies'>
-						<div className='company'>
-							company
-						</div>
-						<div className='company'>
-							companies
-						</div>
-						<div className='company'>
-							company
-						</div>
-						<div className='company'>
-							company
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
+    return (
+        <>
+            <nav className="container navbar navbar-expand-lg navbar-light bg-light">
+                <NavLink to='/' className='link'>Home</NavLink>
+                <button className="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item active">
+                            <NavLink to='/' className='nav-link '>Home</NavLink>
+                        </li>
+                        <li className="nav-item active">
+                            <NavLink to='/team' className='nav-link '>Team </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/projects' className='nav-link '>Projects</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/blog' className='nav-link '>News And Blog</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/career' className='nav-link '>Career</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink to='/about' className='nav-link '>About</NavLink>
+                        </li>
+                        {/*<li className="nav-item dropdown">*/}
+                        {/*    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"*/}
+                        {/*       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/}
+                        {/*        Dropdown*/}
+                        {/*    </a>*/}
+                        {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdown">*/}
+                        {/*        <a className="dropdown-item" href="#">Action</a>*/}
+                        {/*        <a className="dropdown-item" href="#">Another action</a>*/}
+                        {/*        <div className="dropdown-divider"></div>*/}
+                        {/*        <a className="dropdown-item" href="#">Something else here</a>*/}
+                        {/*    </div>*/}
+                        {/*</li>*/}
+                    </ul>
+                </div>
+            </nav>
+            <MainHeader/>
+        </>
+    )
 }
 
 export default Header
