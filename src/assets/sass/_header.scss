@@ -1,0 +1,52 @@
+.header{
+  background-image: linear-gradient(to right, #095FA4, #08417F);
+  padding-top: 20px;
+  color: white;
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    .link{
+      padding: 10px;
+      box-sizing: border-box;
+      transition: 0.4s;
+      &:hover{
+        background-color: #365ee4;
+      }
+    }
+  }
+  .header-content{
+    width: 60%;
+    margin: 200px auto;
+    .first-impression{
+      display: flex;
+      .texts{
+        width: 50%;
+        p{
+          font-size: 20px;
+        }
+        .btn-journey-start{
+          background-color: #0DC5AB;
+          margin-top: 34px;
+          border-radius: 4px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          padding: 17px 40px;
+          width: max-content;
+          font-weight: bold;
+        }
+      }
+      .gif-box{
+        width: 50%;
+        .gif{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
