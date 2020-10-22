@@ -22,7 +22,6 @@ const Header = () => {
 
             header.classList.add('headerScrolled');
         } else {
-            console.log('qwe')
             header.classList.remove('headerScrolled');
         }
     }

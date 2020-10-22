@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Header from './components/layout/Header'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import Footer from "./components/layout/Footer";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/career' component={About}/>
                     <Route path='/contactus' component={About}/>
                 </Switch>
+                <Footer/>
             </Router>
         </div>
     )
