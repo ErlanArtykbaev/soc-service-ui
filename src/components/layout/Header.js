@@ -47,7 +47,7 @@ const Header = () => {
                     </ul>
                 </div>
             </nav>
-            <MainHeader/>
+
         </>
     )
 }
