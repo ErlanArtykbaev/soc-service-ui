@@ -30,7 +30,8 @@
   }
   .header-content{
     width: 60%;
-    margin: 200px auto;
+    margin: 200px auto 0 auto;
+    padding-bottom: 150px;
     .first-impression{
       display: flex;
       .texts{
@@ -58,25 +59,6 @@
           width: 100%;
         }
       }
-    }
-  }
-  .trusted-companies-box{
-		z-index: 1;
-    box-shadow: -10px 20px 60px rgba(110,133,168,.128141);
-    background-color: #fff;
-    width: 100%;
-    position: relative;
-    top: 50px;
-    border-radius: 20px;
-    color: black;
-    padding-bottom: 20px;
-    h4{
-      text-align: center;
-      padding-top: 16px;
-    }
-    .trusted-companies{
-      display: flex;
-      justify-content: space-around;
     }
   }
 }

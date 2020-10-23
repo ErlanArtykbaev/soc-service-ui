@@ -2,12 +2,13 @@ import React from 'react'
 import MainHeader from "../components/Home/MainHeader";
 import TechnologiesCard from "../components/TechnologiesCard/TechnologiesCard";
 import WeUseCard from "../components/TechnologiesCard/WeUseCard/WeUseCard";
+import Slider from "../containers/Slider";
 
 const Home = () => {
     return (
         <div className='home'>
             <MainHeader/>
-            <br/>
+            <Slider />
 
             <section className="container">
                 <div className="row row--large-gutter@xl-up u-pad-ends-small@lg-up u-pad-ends-2xsmall@ms-down">

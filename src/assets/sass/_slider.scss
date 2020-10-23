@@ -1,0 +1,29 @@
+.slider{
+  width: 60%;
+  margin: auto;
+  .trusted-companies-box{
+    z-index: 1;
+    box-shadow: -10px 20px 60px rgba(110,133,168,.128141);
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    top: -50px;
+    border-radius: 20px;
+    color: black;
+    padding-bottom: 20px;
+    h4{
+      text-align: center;
+      padding-top: 16px;
+    }
+    .trusted-companies{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .slides{
+    width: 100%;
+    height: 100px;
+    background-color: #2aa52a;
+    border-radius: 20px;
+  }
+}

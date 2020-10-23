@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Project from '../components/Project'
+import Project from '../components/Projects/Project'
 
 import market from '../assets/img/startup-market-desktop.png'
 import mobil from '../assets/img/mobil-avans.png'

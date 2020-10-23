@@ -22,23 +22,6 @@ const MainHeader = () => {
                         <img className='gif' src={bisness} alt='like' />
                     </div>
                 </div>
-                <div className='trusted-companies-box'>
-                    <h4>Trusted by more than 3,000 companies </h4>
-                    <div className='trusted-companies'>
-                        <div className='company'>
-                            company
-                        </div>
-                        <div className='company'>
-                            companies
-                        </div>
-                        <div className='company'>
-                            company
-                        </div>
-                        <div className='company'>
-                            company
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

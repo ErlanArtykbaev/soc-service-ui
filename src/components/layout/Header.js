@@ -39,9 +39,6 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
-                            <NavLink to='/' className='nav-link '>Home</NavLink>
-                        </li>
-                        <li className="nav-item active">
                             <NavLink to='/team' className='nav-link '>Team </NavLink>
                         </li>
                         <li className="nav-item">
