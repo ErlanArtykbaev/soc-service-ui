@@ -1,5 +1,4 @@
 import React from 'react';
-import WeUseCard from "./WeUseCard/WeUseCard";
 
 const TechnologiesCard = (props) => {
     return (

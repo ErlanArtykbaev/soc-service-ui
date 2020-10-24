@@ -1,5 +1,7 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import Carusel from 'nuka-carousel'
+import {ServiceContext} from "../store/ServicesContext";
+import Slide from "../components/Slides/Slide";
 
 const Slider = () => {
     const [config, setConfig] = useState({
@@ -11,6 +13,7 @@ const Slider = () => {
         heightMode: 'max',
         withoutControls: true
     })
+    const [services, setServices] = useContext(ServiceContext)
 
     const currentSlide = (id) => {
         setConfig({
@@ -25,34 +28,34 @@ const Slider = () => {
                 <h4>Наши сервисы</h4>
                 <div className='trusted-companies'>
                     <div
-                        className='company'
+                        className={config.slideIndex === 0 ? 'company current' : 'company'}
                         onClick={() => currentSlide(0)}
                     >
-                        company1
+                        Аналитика
                     </div>
                     <div
-                        className='company'
+                        className={config.slideIndex === 1 ? 'company current' : 'company'}
                         onClick={() => currentSlide(1)}
                     >
-                        company2
+                        Веб-разработка
                     </div>
                     <div
-                        className='company'
+                        className={config.slideIndex === 2 ? 'company current' : 'company'}
                         onClick={() => currentSlide(2)}
                     >
-                        companies3
+                        Мобильное приложение
                     </div>
                     <div
-                        className='company'
+                        className={config.slideIndex === 3 ? 'company current' : 'company'}
                         onClick={() => currentSlide(3)}
                     >
-                        company4
+                        Ux/ui Дизайн
                     </div>
                     <div
-                        className='company'
+                        className={config.slideIndex === 4 ? 'company current' : 'company'}
                         onClick={() => currentSlide(4)}
                     >
-                        company5
+                        Поддержка
                     </div>
                 </div>
             </div>
@@ -64,11 +67,17 @@ const Slider = () => {
                     transitionMode={config.transitionMode}
                     heightMode={config.heightMode}
                 >
-                    <div className='slides'>1</div>
-                    <div className='slides'>2</div>
-                    <div className='slides'>3</div>
-                    <div className='slides'>4</div>
-                    <div className='slides'>5</div>
+                    {
+                        services.map(service => (
+                            <Slide
+                                title={service.title}
+                                text={service.text}
+                                subtitle={service.subtitle}
+                                techs={service.techs}
+                                img={service.img}
+                            />
+                        ))
+                    }
                 </Carusel>
             </div>
         </div>

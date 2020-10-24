@@ -10,6 +10,7 @@ import Header from './components/layout/Header'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Footer from "./components/layout/Footer";
+import {ServiceProvider} from "./store/ServicesContext";
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
             <Router>
                 <Header/>
                 <Switch>
-                    <Route path='/' exact component={Home}/>
+                    <ServiceProvider>
+                        <Route path='/' exact component={Home}/>
+                    </ServiceProvider>
                     <Route path='/admin' component={Admin}/>
                     <Route path='/about' component={About}/>
                     <Route path='/team' component={About}/>

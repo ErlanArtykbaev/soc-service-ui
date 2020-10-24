@@ -18,12 +18,34 @@
     .trusted-companies{
       display: flex;
       justify-content: space-around;
+      .company{
+        &.current{
+          background-color: blue;
+        }
+      }
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
   .slides{
-    width: 100%;
-    height: 100px;
-    background-color: #2aa52a;
-    border-radius: 20px;
+    .slide{
+      display: flex;
+      .information{
+        width: 50%;
+        .techs{
+          display: flex;
+          flex-wrap: wrap;
+          .tech{
+            width: 150px;
+            height: 30px;
+          }
+        }
+      }
+      .photo{
+        width: 50%;
+        @include flexCenter();
+      }
+    }
   }
 }
