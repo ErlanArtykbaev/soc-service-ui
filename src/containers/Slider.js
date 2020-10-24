@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react'
 import Carusel from 'nuka-carousel'
 import {ServiceContext} from '../store/ServicesContext'
 import Slide from '../components/Slides/Slide'
+import TrustedCompanies from '../components/Slides/TrustedCompanies'
 
 const Slider = () => {
   const [config, setConfig] = useState({
@@ -24,36 +25,7 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <div className="trusted-companies-box">
-        <h4>Наши сервисы</h4>
-        <div className="trusted-companies">
-          <div
-            className={config.slideIndex === 0 ? 'company current' : 'company'}
-            onClick={() => currentSlide(0)}>
-            Аналитика
-          </div>
-          <div
-            className={config.slideIndex === 1 ? 'company current' : 'company'}
-            onClick={() => currentSlide(1)}>
-            Веб-разработка
-          </div>
-          <div
-            className={config.slideIndex === 2 ? 'company current' : 'company'}
-            onClick={() => currentSlide(2)}>
-            Мобильное приложение
-          </div>
-          <div
-            className={config.slideIndex === 3 ? 'company current' : 'company'}
-            onClick={() => currentSlide(3)}>
-            Ux/ui Дизайн
-          </div>
-          <div
-            className={config.slideIndex === 4 ? 'company current' : 'company'}
-            onClick={() => currentSlide(4)}>
-            Поддержка
-          </div>
-        </div>
-      </div>
+      <TrustedCompanies current={currentSlide} config={config} />
       <div className="slides">
         <Carusel
           withoutControls={config.withoutControls}
