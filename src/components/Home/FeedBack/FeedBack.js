@@ -5,71 +5,49 @@ import Button from "../../UI/Button/Button";
 
 const FeedBack = () => {
 
-    const setActive = (el, active) => {
-        const formField = el.parentNode.parentNode
-        if (active) {
-            formField.classList.add('form-field--is-active')
+
+
+    $('body').on('focus', '.wrap input', function (event) {
+        $(this).parent().addClass('active');
+    });
+
+    $('body').on('blur', '.wrap input', function () {
+        if (!$(this).val().length > 0) {
+            $(this).parent().removeClass('active');
+        }
+    });
+
+    $('body').on('keyup', '.wrap input', function () {
+        $('.wrap .from').text($(this).val().length);
+
+        if ($(this).val().length >= 6) {
+            $('.wrap .count').addClass('active');
         } else {
-            formField.classList.remove('form-field--is-active')
-            el.value === '' ?
-                formField.classList.remove('form-field--is-filled') :
-                formField.classList.add('form-field--is-filled')
+            $('.wrap .count').removeClass('active');
         }
-    }
 
-    [].forEach.call(
-        document.querySelectorAll('.form-field__input, .form-field__textarea'),
-        (el) => {
-            el.onblur = () => {
-                setActive(el, false)
-            }
-            el.onfocus = () => {
-                setActive(el, true)
-            }
+        if ($(this).val().search(/\d/) != -1) {
+            $('.wrap .number').addClass('active');
+        } else {
+            $('.wrap .number').removeClass('active');
         }
-    )
 
-    // $('body').on('focus', '.wrap input', function (event) {
-    //     $(this).parent().addClass('active');
-    // });
-    //
-    // $('body').on('blur', '.wrap input', function () {
-    //     if (!$(this).val().length > 0) {
-    //         $(this).parent().removeClass('active');
-    //     }
-    // });
-    //
-    // $('body').on('keyup', '.wrap input', function () {
-    //     $('.wrap .from').text($(this).val().length);
-    //
-    //     if ($(this).val().length >= 6) {
-    //         $('.wrap .count').addClass('active');
-    //     } else {
-    //         $('.wrap .count').removeClass('active');
-    //     }
-    //
-    //     if ($(this).val().search(/\d/) != -1) {
-    //         $('.wrap .number').addClass('active');
-    //     } else {
-    //         $('.wrap .number').removeClass('active');
-    //     }
-    //
-    //     if (/[A-Z]/.test($(this).val())) {
-    //         $('.wrap .upper').addClass('active');
-    //     } else {
-    //         $('.wrap .upper').removeClass('active');
-    //     }
-    // });
-    //
-    // $('body').on('click', '.wrap svg:not(.active)', function () {
-    //     $(this).addClass('active');
-    //     $('.wrap input').attr('type', 'text');
-    // });
-    //
-    // $('body').on('click', '.wrap svg.active', function () {
-    //     $(this).removeClass('active');
-    //     $('.wrap input').attr('type', 'password');
-    // });
+        if (/[A-Z]/.test($(this).val())) {
+            $('.wrap .upper').addClass('active');
+        } else {
+            $('.wrap .upper').removeClass('active');
+        }
+    });
+
+    $('body').on('click', '.wrap svg:not(.active)', function () {
+        $(this).addClass('active');
+        $('.wrap input').attr('type', 'text');
+    });
+
+    $('body').on('click', '.wrap svg.active', function () {
+        $(this).removeClass('active');
+        $('.wrap input').attr('type', 'password');
+    });
     return (
         <>
 
