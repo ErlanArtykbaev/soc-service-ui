@@ -1,0 +1,149 @@
+.feedback {
+  background: #F6F7FB;
+
+
+  &_inLeftBlock {
+    margin-top: -80px;
+    padding: 0 60px;
+  }
+  &_inRightBlock {
+    margin-top: -80px;
+    //padding: 0 30px;
+  }
+
+  &_ourPartnersImage {
+    max-width: 730px;
+    max-height: 369px;
+  }
+
+  &_emailUs {
+    background: white;
+    border-radius: 45px;
+    padding: 45px;
+    box-shadow: 0px 15px 50px #0F314B17;
+    min-width: 400px;
+    //margin-top: -90px;
+  }
+
+  &_title {
+    color: #046AF3;
+    font-family: Rubik;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &_description {
+    color: #ADB4C2;
+    margin: 0;
+    font-family: Rubik;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &_form {
+    margin-top: 40px;
+  }
+
+  &_fieldLabel {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &_textarea {
+    height: 100px;
+  }
+}
+
+
+
+
+
+
+
+.wrap {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+
+  .tips {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .group {
+    position: relative;
+    padding-bottom: 5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #edf0f5;
+      transition: all .15s ease-in-out;
+      z-index: 1;
+    }
+
+    &.active {
+      label {
+        top: -15px;
+        font-size: 14px;
+      }
+
+      &::before {
+        background: #6884dd;
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transition: all .15s ease-in-out;
+    pointer-events: none;
+  }
+
+  .number {
+    transition: all .2s ease-in-out;
+
+    &.active {
+      color: #428bfa;
+    }
+  }
+
+  .count {
+    transition: all .2s ease-in-out;
+
+    &.active {
+      color: #428bfa;
+    }
+  }
+
+  .upper {
+    transition: all .2s ease-in-out;
+
+    &.active {
+      color: #428bfa;
+    }
+  }
+
+  input {
+    border: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

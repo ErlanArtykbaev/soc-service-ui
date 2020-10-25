@@ -4,3 +4,31 @@
 @import './projects';
 @import './rubikFonts';
 @import './slider';
+@import './home/feedback';
+@import './UI/button';
+@import './footer/footer';
+
+
+.px {
+  &-20 {
+    font-size: 20px;
+  }
+}
+
+.fw- {
+  &400 {
+    font-weight: 400;
+  }
+
+  &500 {
+    font-weight: 500;
+  }
+}
+
+.baseGrayColor {
+  color: #ADB4C2;
+}
+
+.baseLightBlueColor {
+  color: #2280FF;
+}
