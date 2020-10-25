@@ -63,22 +63,15 @@
 }
 
 .headerScrolled {
-<<<<<<< HEAD
 	background-color: #fff;
   transition: background-color 0.5s ease-out;
-=======
-  background: #095fa4;
-  margin-top: -40px;
-  transition: background-color, margin-top 0.3s ease-out;
->>>>>>> bc5f8a1892569587d58b30c134a8bb6d34857031
   z-index: 10;
-
 }
 
 .info-header {
 	width: 100%;
 	background-color: #046AF3;
-	.wrap{
+	.wrap-header{
 		font-size: 12px;
 		width: 60%;
 		display: flex;

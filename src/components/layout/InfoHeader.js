@@ -8,7 +8,7 @@ import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg'
 const InfoHeader = () => {
   return (
     <div className="info-header">
-			<div className='wrap'>
+			<div className='wrap-header'>
 				<div className='texts'>
 					<span>ул. Исанова 42, Бишкек, Кыргызстан</span>
 					<span>+996 (312) 432 738</span>
