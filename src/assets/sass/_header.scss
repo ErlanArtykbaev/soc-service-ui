@@ -63,7 +63,39 @@
 }
 
 .headerScrolled {
-  background: #095fa4;
+	background-color: #fff;
   transition: background-color 0.5s ease-out;
   z-index: 10;
+}
+
+.info-header {
+	width: 100%;
+	background-color: #046AF3;
+	.wrap{
+		font-size: 12px;
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		.texts{
+			display: flex;
+			align-items: center;
+			span{
+				margin: 0 5px;
+				color: #fff;
+			}
+		}
+		.icon{
+			margin: 8px 15px;
+			box-sizing: border-box;
+		}
+	}
+	&.scroll{
+		background-color: #fff;
+		.texts{
+			span{
+				color: black;
+			}
+		}
+	}
 }

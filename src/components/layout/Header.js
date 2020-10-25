@@ -1,6 +1,8 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
+import InfoHeader from './InfoHeader'
+
 const Header = () => {
   // document.scroll(() => {
   //     if (document.scrollTop() > 50) {
@@ -30,6 +32,7 @@ const Header = () => {
 
   return (
     <div id={'header'} className={'header position-fixed w-100'}>
+      <InfoHeader />
       <nav className="container navbar navbar-expand-lg navbar-light bg-light bg-transparent">
         <NavLink to="/" className="link">
           Home
@@ -46,9 +49,9 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
+            <li className="nav-item">
               <NavLink to="/team" className="nav-link ">
-                Team{' '}
+                Team
               </NavLink>
             </li>
             <li className="nav-item">
@@ -71,18 +74,6 @@ const Header = () => {
                 About
               </NavLink>
             </li>
-            {/*<li className="nav-item dropdown">*/}
-            {/*    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"*/}
-            {/*       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/}
-            {/*        Dropdown*/}
-            {/*    </a>*/}
-            {/*    <div className="dropdown-menu" aria-labelledby="navbarDropdown">*/}
-            {/*        <a className="dropdown-item" href="#">Action</a>*/}
-            {/*        <a className="dropdown-item" href="#">Another action</a>*/}
-            {/*        <div className="dropdown-divider"></div>*/}
-            {/*        <a className="dropdown-item" href="#">Something else here</a>*/}
-            {/*    </div>*/}
-            {/*</li>*/}
           </ul>
         </div>
       </nav>
