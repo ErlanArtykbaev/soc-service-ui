@@ -1,61 +1,60 @@
-.MainHeader{
-  background-image: linear-gradient(to right, #095FA4, #08417F);
+.MainHeader {
+  background: #f6f8fa 0% 0% no-repeat padding-box;
   padding-top: 40px;
-  color: white;
-  .menu{
+  color: #08064f;
+  .menu {
     display: flex;
     justify-content: space-between;
     width: 60%;
     margin: auto;
-    a{
+    a {
       text-decoration: none;
       color: white;
     }
-    .link{
+    .link {
       padding: 10px;
       box-sizing: border-box;
       transition: 0.4s;
-      &:hover{
+      &:hover {
         background-color: #365ee4;
       }
     }
-    .contact{
-      .link{
-        border: 1px solid #0DC5AB;
-        color: #0DC5AB;
+    .contact {
+      .link {
+        border: 1px solid #0dc5ab;
+        color: #0dc5ab;
         background: transparent;
         border-radius: 6px;
       }
     }
   }
-  .header-content{
+  .header-content {
     width: 60%;
     margin: 200px auto 0 auto;
     padding-bottom: 150px;
-    .first-impression{
+    .first-impression {
       display: flex;
-      .texts{
+      .texts {
         width: 50%;
-        p{
+        p {
           font-size: 20px;
         }
-        .btn-journey-start{
-          background-color: #0DC5AB;
+        .btn-journey-start {
+          background-color: #0dc5ab;
           margin-top: 34px;
           border-radius: 4px;
-          letter-spacing: 1px;
           text-transform: uppercase;
           padding: 17px 40px;
           width: max-content;
-          font-weight: bold;
-          &:hover{
+          color: white;
+          &:hover {
             cursor: pointer;
           }
         }
       }
-      .gif-box{
+      .gif-box {
         width: 50%;
-        .gif{
+        .gif {
           width: 100%;
         }
       }
@@ -63,9 +62,8 @@
   }
 }
 
-.headerScrolled{
-  background: #095FA4;
+.headerScrolled {
+  background: #095fa4;
   transition: background-color 0.5s ease-out;
-	z-index: 10;
+  z-index: 10;
 }
-

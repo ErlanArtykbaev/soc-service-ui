@@ -1,5 +1,7 @@
 import React, {createContext, useState} from 'react'
 
+import img from '../assets/img/Services/Group 115.png'
+
 export const ServiceContext = createContext()
 
 export const ServiceProvider = props => {
@@ -23,8 +25,7 @@ export const ServiceProvider = props => {
         'Yarn',
         'Formatters',
       ],
-      img:
-        'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg',
+      img: img,
     },
     {
       title: 'Создаем веб-проекты с нуля',
@@ -45,8 +46,7 @@ export const ServiceProvider = props => {
         'Yarn',
         'Formatters',
       ],
-      img:
-        'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg',
+      img: img,
     },
     {
       title: 'Создаем мобильные приложения с нуля',
@@ -67,8 +67,7 @@ export const ServiceProvider = props => {
         'Yarn',
         'Formatters',
       ],
-      img:
-        'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg',
+      img: img,
     },
     {
       title: 'Создаем дизайны с нуля',
@@ -89,8 +88,7 @@ export const ServiceProvider = props => {
         'Yarn',
         'Formatters',
       ],
-      img:
-        'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg',
+      img: img,
     },
     {
       title: 'Поддержка сервисов и оптимизация',
@@ -111,8 +109,7 @@ export const ServiceProvider = props => {
         'Yarn',
         'Formatters',
       ],
-      img:
-        'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F_400x400.jpg',
+      img: img,
     },
   ])
   return (

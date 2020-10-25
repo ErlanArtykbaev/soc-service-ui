@@ -4,6 +4,12 @@ import {ServiceContext} from '../store/ServicesContext'
 import Slide from '../components/Slides/Slide'
 import TrustedCompanies from '../components/Slides/TrustedCompanies'
 
+import analitics from '../assets/img/Services/Pie chart.png'
+import web from '../assets/img/Services/Group 228.svg'
+import mob from '../assets/img/Services/Smartphone.svg'
+import design from '../assets/img/Services/Group 229.png'
+import supp from '../assets/img/Services/Group 230.svg'
+
 const Slider = () => {
   const [config, setConfig] = useState({
     slideIndex: 0,
@@ -13,6 +19,7 @@ const Slider = () => {
     transitionMode: 'scroll',
     heightMode: 'max',
     withoutControls: true,
+    images: [analitics, web, mob, design, supp],
   })
   const [services, setServices] = useContext(ServiceContext)
 
@@ -25,7 +32,11 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <TrustedCompanies current={currentSlide} config={config} />
+      <TrustedCompanies
+        img={config.images}
+        current={currentSlide}
+        config={config}
+      />
       <div className="slides">
         <Carusel
           withoutControls={config.withoutControls}

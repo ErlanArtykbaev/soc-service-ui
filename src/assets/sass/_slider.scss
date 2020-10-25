@@ -1,9 +1,9 @@
-.slider{
+.slider {
   width: 60%;
   margin: auto;
-  .trusted-companies-box{
+  .trusted-companies-box {
     z-index: 1;
-    box-shadow: -10px 20px 60px rgba(110,133,168,.128141);
+    box-shadow: -10px 20px 60px rgba(110, 133, 168, 0.128141);
     background-color: #fff;
     width: 100%;
     position: relative;
@@ -11,40 +11,60 @@
     border-radius: 20px;
     color: black;
     padding-bottom: 20px;
-    h4{
+    h4 {
       text-align: center;
       padding-top: 16px;
     }
-    .trusted-companies{
+    .trusted-companies {
       display: flex;
-      justify-content: space-around;
-      .company{
-        &.current{
-          background-color: blue;
+      justify-content: space-evenly;
+      .company {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        width: 17%;
+        .icons {
+          height: 100%;
+        }
+        &.current {
+          opacity: 1;
         }
       }
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
   }
-  .slides{
-    .slide{
+  .slides {
+    .slide {
+      margin-top: 20px;
       display: flex;
-      .information{
+      .information {
         width: 50%;
-        .techs{
+        h2 {
+          color: #046af3;
+          margin-bottom: 20px;
+        }
+        h6 {
+          margin-top: 50px;
+          color: #adb4c2;
+        }
+        .techs {
           display: flex;
           flex-wrap: wrap;
-          .tech{
+          .tech {
             width: 150px;
             height: 30px;
           }
         }
       }
-      .photo{
-        width: 50%;
+      .photo {
         @include flexCenter();
+        img {
+          width: 100%;
+        }
       }
     }
   }
