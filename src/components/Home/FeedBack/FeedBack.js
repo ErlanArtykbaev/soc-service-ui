@@ -30,7 +30,7 @@ const FeedBack = () => {
     if (
       $(this)
         .val()
-        .search(/\d/) != -1
+        .search(/\d/) !== -1
     ) {
       $('.wrap .number').addClass('active');
     } else {

@@ -1,5 +1,5 @@
 import React from 'react'
-import bisness from '../../assets/img/bisness.svg'
+import obj from '../../assets/img/Objects.png'
 
 const MainHeader = () => {
   return (
@@ -8,17 +8,15 @@ const MainHeader = () => {
         <div className="first-impression">
           <div className="texts">
             <h1>
-              Join the New Era of Secure Digital Identities and Business
-              Communications
+							Гос. Предприятие "Соцсервис"
             </h1>
             <p>
-              Our unique platform is developed to facilitate all your business
-              processes with the highest security standards.
+							При государственном комитете информационных технологий и связи кыргызской республики.
             </p>
-            <div className="btn-journey-start">journey starts here</div>
+            <div className="btn-journey-start">Узнать о нас БОЛЬШЕ</div>
           </div>
           <div className="gif-box">
-            <img className="gif" src={bisness} alt="like" />
+            <img className="gif" src={obj} alt="like" />
           </div>
         </div>
       </div>

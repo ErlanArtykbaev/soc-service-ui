@@ -1,13 +1,14 @@
 .slider {
   width: 60%;
   margin: auto;
+	margin-bottom: 200px;
   .trusted-companies-box {
     z-index: 1;
-    box-shadow: -10px 20px 60px rgba(110, 133, 168, 0.128141);
+		box-shadow: 0px 15px 50px #0F314B17;
     background-color: #fff;
     width: 100%;
     position: relative;
-    top: -50px;
+    top: -100px;
     border-radius: 20px;
     color: black;
     padding-bottom: 20px;
@@ -41,6 +42,7 @@
     .slide {
       margin-top: 20px;
       display: flex;
+			height: 500px;
       .information {
         width: 50%;
         h2 {

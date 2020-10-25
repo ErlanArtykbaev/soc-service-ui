@@ -2,6 +2,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 
 import InfoHeader from './InfoHeader'
+import logo from '../../assets/img/logo.png'
 
 const Header = () => {
   // document.scroll(() => {
@@ -33,50 +34,38 @@ const Header = () => {
   return (
     <div id={'header'} className={'header position-fixed w-100'}>
       <InfoHeader />
-      <nav className="container navbar navbar-expand-lg navbar-light bg-light bg-transparent">
-        <NavLink to="/" className="link">
-          Home
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <NavLink to="/team" className="nav-link ">
-                Team
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/projects" className="nav-link ">
-                Projects
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/blog" className="nav-link ">
-                News And Blog
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/career" className="nav-link ">
-                Career
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/about" className="nav-link ">
-                About
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div className="menu">
+				<div className='left-menu'>
+					<NavLink to="/" className="link">
+						<img src={logo} alt='logo' className='logo' />
+					</NavLink>
+				</div>
+				<div className='middle-menu'>
+					<NavLink to="/" className="link center-link" >
+						Главная	
+					</NavLink>
+					<NavLink to="/projects" className="link center-link" >
+						Проекты
+					</NavLink>
+					<NavLink to="/about" className="link center-link" >
+						О Нас
+					</NavLink>
+					<NavLink to="/blog" className="link center-link" >
+						Новости
+					</NavLink>
+					<NavLink to="/vacancies" className="link center-link" >
+						Вакансии
+					</NavLink>
+					<NavLink to="/contacts" className="link center-link" >
+						Контакты
+					</NavLink>
+				</div>
+				<div className='rigth-menu'>
+					<NavLink to="/contactUs" className="link cont">
+						Консультация
+					</NavLink>
+				</div>
+      </div>
     </div>
   )
 }

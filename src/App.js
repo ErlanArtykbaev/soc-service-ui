@@ -21,13 +21,13 @@ function App() {
           <ServiceProvider>
             <Route path="/" exact component={Home} />
           </ServiceProvider>
-          <Route path="/admin" component={Admin} />
-          <Route path="/about" component={About} />
-          <Route path="/team" component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/blog" component={About} />
-          <Route path="/career" component={About} />
-          <Route path="/contactus" component={About} />
+          <Route path="/admin" exact component={Admin} />
+          <Route path="/about" exact component={About} />
+          <Route path="/team" exact component={About} />
+          <Route path="/projects" exact component={Projects} />
+          <Route path="/blog" exact component={About} />
+          <Route path="/career" exact component={About} />
+          <Route path="/contactUs" exact component={About} />
         </Switch>
         <Footer />
       </Router>
