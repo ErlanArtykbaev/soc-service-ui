@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+	<Suspense fallback={(<div>loading...</div>)}>
     <App />
-  </React.StrictMode>,
+  </Suspense>,
   document.getElementById('root')
 );
 
