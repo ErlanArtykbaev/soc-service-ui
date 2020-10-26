@@ -12,7 +12,6 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Footer from './components/layout/Footer'
 import {ServiceProvider} from './store/ServicesContext'
-
 import './i18next'
 
 function App() {

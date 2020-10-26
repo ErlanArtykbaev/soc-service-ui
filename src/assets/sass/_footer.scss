@@ -1,5 +1,7 @@
+@import "./mixins";
+
 .footer {
-  background: #046AF3;
+  background: $baseBlackColor;
   color: #F7F7F7;
   &_white {
     color: #F7F7F7;
