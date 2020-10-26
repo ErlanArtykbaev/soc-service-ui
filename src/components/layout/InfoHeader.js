@@ -7,6 +7,7 @@ import insta from '../../assets/img/socIcons/iconmonstr-instagram-11.svg'
 import linked from '../../assets/img/socIcons/iconmonstr-linkedin-3.svg'
 import twitter from '../../assets/img/socIcons/iconmonstr-twitter-1.svg'
 import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg'
+import English from '../../assets/img/english.png'
 
 import engLang from '../../assets/img/lang/united-states-of-america-flag-icon-64.png'
 import kgLang from '../../assets/img/lang/kyrgyzstan-flag-icon-64.png'
@@ -14,6 +15,36 @@ import ruLang from '../../assets/img/lang/russia-flag-icon-64.png'
 
 
 const InfoHeader = () => {
+
+    return (
+        <div className="info-header">
+            <div className='wrap-header'>
+                <div className='texts'>
+                    <span>ул. Исанова 42, Бишкек, Кыргызстан</span>
+                    <span>+996 (312) 432 738</span>
+                </div>
+                <div>
+                    <img className='icon' src={linked} alt='linkedin'/>
+                    <img className='icon' src={insta} alt='instagram'/>
+                    <img className='icon' src={twitter} alt='twitter'/>
+                    <img className='icon' src={facebook} alt='facebook'/>
+                </div>
+                <div className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span className={'english'}><img src={English}
+                                                         alt=""/></span>
+                    </a>
+                    <div className="dropdown-menu text-right language-picker" aria-labelledby="navbarDropdown">
+                        <a className="dropdown-item p-0 pr-2 " href="#"><span className={'english'}><img src={English}
+                                                                                                         alt=""/></span>English</a>
+                        <a className="dropdown-item p-0 pr-2" href="#">Russian</a>
+                        <a className="dropdown-item p-0 pr-2" href="#">Kyrgyz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 
 	//const {t, i18next} = useTranslation()
 
@@ -23,20 +54,20 @@ const InfoHeader = () => {
 
 	const langs = [
 		{
-			value: 'ru', label: <img src={ruLang} alt='ru lang' className='lang-select' /> 
+			value: 'ru', label: <img src={ruLang} alt='ru lang' className='lang-select' />
 		},
 		{
-			value: 'en', label: <img src={engLang} alt='en lang' className='lang-select' /> 
+			value: 'en', label: <img src={engLang} alt='en lang' className='lang-select' />
 		},
 		{
-			value: 'kg', label: <img src={kgLang} alt='kg lang' className='lang-select' /> 
+			value: 'kg', label: <img src={kgLang} alt='kg lang' className='lang-select' />
 		}
 	]
 
 	const selectStyle = {
 		option: (provided, state) => ({
 			...provided,
-			backgroundColor: 'transparent' 
+			backgroundColor: 'transparent'
 		})
 	}
 
