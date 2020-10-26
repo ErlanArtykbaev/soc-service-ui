@@ -41,11 +41,10 @@ const Footer = () => {
           </div>
           <div className="col-sm-12 col-md-3 d-flex flex-column align-items-start flex-wrap px-14">
             <p className={'m-0'}>Подпишитесь на наши новости</p>
-            <input
-              type="text"
-              value={input}
-              onChange={e => setInput(e.target.value)}
-            />
+            <div className="form-group">
+              <input className="form-field" type="email" placeholder="Email"/>
+                <span>@gmail.com</span>
+            </div>
           </div>
           <div className="col-sm-12 col-md-3 d-flex flex-column align-items-end flex-wrap fw-300 px-12">
             <p className={'m-0'}>Исанова 87, 2 этаж, Бишкек, Кыргызстан</p>
