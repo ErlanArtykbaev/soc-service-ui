@@ -9,40 +9,43 @@ import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg'
 
 
 const InfoHeader = () => {
-	const [lang, setLang] = useState('ru')
-	const {t, i18n} = useTranslation()
+    const [lang, setLang] = useState('ru')
+    const {t, i18n} = useTranslation()
 
-	useEffect(() => {
-		i18n.changeLanguage(lang)
-	}, [lang])
+    useEffect(() => {
+        i18n.changeLanguage(lang)
+    }, [lang])
 
-  return (
-    <div className="info-header">
-			<div className='wrap-header'>
-				<div className='texts'>
-					<span>{t("Address.1")}</span>
-					<span>+996 (312) 432 738</span>
-				</div>
-				<div className='icon-wrap'>
-					<img className='icon' src={linked} alt='linkedin' />
-					<img className='icon' src={insta} alt='instagram' />
-					<img className='icon' src={twitter} alt='twitter' />
-					<img className='icon' src={facebook} alt='facebook' />
-					<select className='lang-select' onChange={(e) => setLang(e.target.value)}>
-						<option value='ru' defaultChecked={true}>
-							рус
-						</option>
-						<option value="en">
-							eng
-						</option>
-						<option value="kg">
-							кыр
-						</option>
-					</select>
-				</div>
-			</div>
-    </div>
-  )
+    return (
+        <div className="info-header">
+            <div className="container">
+                <div className='wrap-header'>
+                    <div className='texts'>
+                        <span>{t("Address.1")}</span>
+                        <span>+996 (312) 432 738</span>
+                    </div>
+                    <div className='icon-wrap'>
+                        <img className='icon' src={linked} alt='linkedin'/>
+                        <img className='icon' src={insta} alt='instagram'/>
+                        <img className='icon' src={twitter} alt='twitter'/>
+                        <img className='icon' src={facebook} alt='facebook'/>
+                        <select className='lang-select' onChange={(e) => setLang(e.target.value)}>
+                            <option value='ru' defaultChecked={true}>
+                                рус
+                            </option>
+                            <option value="en">
+                                eng
+                            </option>
+                            <option value="kg">
+                                кыр
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
 }
 
 export default InfoHeader
