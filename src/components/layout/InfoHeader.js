@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import {useTranslation} from 'react-i18next'
 
@@ -9,18 +9,19 @@ import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg'
 
 
 const InfoHeader = () => {
-
+	const [lang, setLang] = useState('ru')
 	const {t, i18n} = useTranslation()
 
-	const handleOption = async (lang) => {
-		await i18n.changeLanguage(lang)
-	}
+	useEffect(() => {
+		i18n.changeLanguage(lang)
+			.catch(e => console.log(e.message))
+	}, [lang])
 
   return (
     <div className="info-header">
 			<div className='wrap-header'>
 				<div className='texts'>
-					<span>ул. Исанова 42, Бишкек, Кыргызстан</span>
+					<span>{t("Address.1")}</span>
 					<span>+996 (312) 432 738</span>
 				</div>
 				<div className='icon-wrap'>
@@ -28,7 +29,7 @@ const InfoHeader = () => {
 					<img className='icon' src={insta} alt='instagram' />
 					<img className='icon' src={twitter} alt='twitter' />
 					<img className='icon' src={facebook} alt='facebook' />
-					<select className='lang-select' onChange={(e) => handleOption(e.target.value)}>
+					<select className='lang-select' onChange={(e) => setLang(e.target.value)}>
 						<option value='ru' defaultChecked={true}>
 							рус
 						</option>
