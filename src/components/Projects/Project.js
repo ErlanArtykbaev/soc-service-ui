@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Project = props => {
-  return (
+  let a = (
     <div className="project">
       {props.left ? (
         <>
@@ -27,6 +27,11 @@ const Project = props => {
         </>
       )}
     </div>
+  )
+  return (
+    <>
+      {a}
+    </>
   )
 }
 
