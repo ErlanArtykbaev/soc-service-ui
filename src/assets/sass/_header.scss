@@ -99,19 +99,30 @@
         color: #fff;
       }
     }
-		.icon-wrap{
-			display: flex;
-			.icon {
-				margin: 8px 15px;
-				box-sizing: border-box;
-			}
-			.lang-select{
-				width: 20px;
-			}
-		}
-		#language:option[value='en']{
-			background-image: url(../img/lang/united-states-of-america-flag-icon-64.png);
-		}
+      .icon-wrap{
+        display: flex;
+        .icon {
+          width: 14px;
+          margin-right: 15px;
+          margin-top: 12px;
+          margin-bottom: 12px;
+          box-sizing: border-box;
+        }
+        .lang-select{
+          width: fit-content;
+          margin: 0;
+          padding-right: 6px;
+          border: none;
+          appearance: none;
+          color: white;
+          background-image: url("../img/iconmonstr-angel-down-thin.svg");
+          background-repeat: no-repeat;
+          background-size: 9px;
+          background-position-x: right;
+          background-position-y: center;
+          background-color: transparent;
+        }
+      }
   }
   &.scroll {
     background-color: #fff;
