@@ -7,6 +7,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import projectsReducer from './store/reducers/projectsReducer';
 import newsReducer from './store/reducers/newsReducer';
+import languageReducer from './store/reducers/lenguageReducer';
 import {BrowserRouter} from "react-router-dom";
 
 
@@ -15,6 +16,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
     projects: projectsReducer,
     news: newsReducer,
+    language: languageReducer,
 });
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
