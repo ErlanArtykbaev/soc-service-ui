@@ -46,6 +46,7 @@ const Slider = () => {
           heightMode={config.heightMode}>
           {services.map(service => (
             <Slide
+              key={service.title}
               title={service.title}
               text={service.text}
               subtitle={service.subtitle}

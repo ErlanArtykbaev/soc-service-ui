@@ -9,7 +9,7 @@ const Slide = props => {
         <h6>{props.subtitle}</h6>
         <div className="techs">
           {props.techs.map(tech => (
-            <div className="tech">{tech}</div>
+            <div className="tech" key={tech}>{tech}</div>
           ))}
         </div>
       </div>

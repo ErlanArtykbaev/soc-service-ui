@@ -14,7 +14,6 @@ const InfoHeader = () => {
 
 	useEffect(() => {
 		i18n.changeLanguage(lang)
-			.catch(e => console.log(e.message))
 	}, [lang])
 
   return (

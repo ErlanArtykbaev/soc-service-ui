@@ -12,13 +12,12 @@ i18n
 	.use(initReactI18next)
 	.init({
 		fallbackLng: 'en',
-		debug: true,
+		debug: false,
 		whitelist: Languages,
 
-		interpolation:{
+		interpolation: {
 			escapeValue: false
 		}
-	})
-	.catch(e => console.log({message: e.message}))
+	}).then(r => {return r})
 
 export default i18n

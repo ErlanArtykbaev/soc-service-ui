@@ -4,7 +4,6 @@ import insta from '../../assets/img/socIcons/iconmonstr-instagram-11.svg';
 import linked from '../../assets/img/socIcons/iconmonstr-linkedin-3.svg';
 import twitter from '../../assets/img/socIcons/iconmonstr-twitter-1.svg';
 import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg';
-import English from '../../assets/img/english.png';
 import MainLogo from '../../assets/img/logo_white.svg';
 
 const Footer = () => {
@@ -61,7 +60,7 @@ const Footer = () => {
                         <p className={'m-0'}>Подпишитесь на наши новости</p>
                         <br/>
                         <div className="form-group">
-                            <input className="form-field px-12 fw-400" type="email" placeholder="Email Адрес"/>
+                            <input value={input} onChange={e => setInput(e.target.value)} className="form-field px-12 fw-400" type="email" placeholder="Email Адрес"/>
                             <span className={'footer_fieldLabel'}>OK</span>
                         </div>
                     </div>
