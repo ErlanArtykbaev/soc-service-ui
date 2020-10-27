@@ -100,8 +100,8 @@ const FeedBack = () => {
                     <div className="form-group col-sm-12 col-md-12 py-2">
                       <div className="wrap">
                         <div className="group  feedback_fieldLabel baseGrayColor">
-                          <input type="password" id="pas" />
-                          <label htmlFor="pas">Фамилия Имя</label>
+                          <input type="text" id="fullName" />
+                          <label htmlFor="fullName">Фамилия Имя</label>
                         </div>
                       </div>
                     </div>
@@ -109,8 +109,8 @@ const FeedBack = () => {
                     <div className="form-group col-sm-12 col-md-6  py-2">
                       <div className="wrap">
                         <div className="group  feedback_fieldLabel baseGrayColor">
-                          <input type="password" id="pas" />
-                          <label htmlFor="pas">Номер Тел.</label>
+                          <input type="number" id="num" />
+                          <label htmlFor="num">Номер Тел.</label>
                         </div>
                       </div>
                     </div>
@@ -118,8 +118,8 @@ const FeedBack = () => {
                     <div className="form-group col-sm-12 col-md-6  py-2">
                       <div className="wrap">
                         <div className="group feedback_fieldLabel baseGrayColor">
-                          <input type="password" id="pas" />
-                          <label htmlFor="pas">Email</label>
+                          <input type="email" id="email" />
+                          <label htmlFor="email">Email</label>
                         </div>
                       </div>
                     </div>

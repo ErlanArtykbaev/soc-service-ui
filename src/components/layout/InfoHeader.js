@@ -12,9 +12,6 @@ import facebook from '../../assets/img/socIcons/iconmonstr-facebook-1.svg'
 
 const InfoHeader = () => {
     const dispatch = useDispatch();
-    const language = useSelector(state => state.language.language);
-
-
     const [lang, setLang] = useState('ru')
     const {t, i18n} = useTranslation()
 

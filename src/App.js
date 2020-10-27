@@ -13,28 +13,31 @@ import Projects from './pages/Projects'
 import Footer from './components/layout/Footer'
 import {ServiceProvider} from './store/ServicesContext'
 import './i18next'
+import Layout from "./components/layout/Layout";
 
 function App() {
     return (
-        <div className="app">
-            <Router>
-                <Header/>
-                <Switch>
-                    <ServiceProvider>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/admin" exact component={Admin}/>
-                        <Route path="/about" exact component={About}/>
-                        <Route path="/team" exact component={About}/>
-                        <Route path="/projects" exact component={Projects}/>
-                        <Route path="/blog" exact component={About}/>
-                        <Route path="/career" exact component={About}/>
-                        <Route path="/contactUs" exact component={About}/>
-                    </ServiceProvider>
+        <>
+            <Layout>
+                <div className="app">
+                    <Router>
+                        <Switch>
+                            <ServiceProvider>
+                                <Route path="/" exact component={Home}/>
+                                <Route path="/admin" exact component={Admin}/>
+                                <Route path="/about" exact component={About}/>
+                                <Route path="/team" exact component={About}/>
+                                <Route path="/projects" exact component={Projects}/>
+                                <Route path="/blog" exact component={About}/>
+                                <Route path="/career" exact component={About}/>
+                                <Route path="/contactUs" exact component={About}/>
+                            </ServiceProvider>
+                        </Switch>
+                    </Router>
+                </div>
+            </Layout>
+        </>
 
-                </Switch>
-                <Footer/>
-            </Router>
-        </div>
     )
 }
 

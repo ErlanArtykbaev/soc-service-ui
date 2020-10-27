@@ -1,3 +1,14 @@
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  //margin-top: -1px;
+  //padding-top: -2px;
+  //overflow: hidden;
+}
+
+
 .MainHeader {
   background: #f6f8fa 0 0 no-repeat padding-box;
   padding-top: 40px;
@@ -76,10 +87,15 @@
   }
 }
 
-.headerScrolled {
-  background-color: #fff;
+.header-scrolled {
+  background-color: #517de0;
   transition: background-color 0.5s ease-out;
   z-index: 10;
+  color: white;
+  a {
+    color: white;
+  }
+  //z-index: 10;
 }
 
 .info-header {
@@ -132,4 +148,68 @@
       }
     }
   }
+}
+
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+  margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+  background-color:#0060c8!important;
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+  .navbar {
+    padding-top:0px;
+    padding-bottom:0px;
+
+  }
+
+  /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+  .navbar .nav-item {
+    padding:.5rem .5rem;
+    margin:0 .25rem;
+  }
+
+  /* makes the dropdown full width  */
+  .navbar .dropdown {position:static;}
+
+  .navbar .dropdown-menu {
+    width: 135%;
+    left: -290px;
+    //right:0;
+    /*  height of nav-item  */
+    top: 53px;
+
+    display:block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+
+
+  }
+
+
+
+
+  /* shows the dropdown menu on hover */
+  .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+    display:block;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s linear;
+
+  }
+
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+    z-index: 11;
+  }
+
 }
