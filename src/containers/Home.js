@@ -1,6 +1,6 @@
 import React from 'react'
 import MainHeader from '../components/Home/MainHeader'
-import Slider from '../containers/Slider'
+import Slider from './Slider'
 import FeedBack from "../components/Home/FeedBack/FeedBack";
 
 const Home = () => {
